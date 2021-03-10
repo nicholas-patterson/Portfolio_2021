@@ -1,0 +1,8 @@
+.container {
+  background: #0a192f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  padding-right: 100px;
+}

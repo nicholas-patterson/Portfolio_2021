@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100px;
+}
+
+.title {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.list {
+  color: #fff;
+  font-size: 1.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  padding-left: 0px;
+}
