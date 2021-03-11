@@ -1,5 +1,13 @@
+:root {
+  --dark-bg: #222831;
+  --orange: #d65a31;
+  --dark-text: #eeeeee85;
+  --light-text: #eee;
+}
+
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {

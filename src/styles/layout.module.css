@@ -1,5 +1,5 @@
 .container {
-  background: #0a192f;
+  background: var(--dark-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

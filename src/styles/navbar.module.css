@@ -1,7 +1,18 @@
 .container {
   display: flex;
   justify-content: space-between;
-  max-height: 100px;
+  max-height: 40px;
+  padding: 4rem 10rem;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px #1b1f25;
+  z-index: 1;
+  background-color: #222831db;
+  box-sizing: border-box;
+  top: 0;
+  transition: top 0.3s;
 }
 
 .title {
@@ -15,6 +26,28 @@
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 20%;
   padding-left: 0px;
+  counter-set: link;
+  align-items: center;
+}
+
+.list li {
+  margin-right: 2rem;
+}
+
+.list li:hover {
+  cursor: pointer;
+}
+
+.list a::before {
+  counter-increment: link;
+  content: counter(link) ". ";
+  color: #d65a31;
+}
+
+.list li:last-of-type {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 10px;
+  margin-right: 0px;
 }

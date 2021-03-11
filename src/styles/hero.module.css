@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.container span {
+  font-size: 3rem;
+  margin: 0px;
+  color: #d65a31;
+}
+
+.container h1 {
+  font-size: 7rem;
+  margin: 0px;
+  color: #eee;
+}
+
+.container h2 {
+  margin: 0px;
+  font-size: 6rem;
+  color: #eeeeee85;
+}
+
+.container .copy {
+  color: #eeeeee85;
+  font-size: 2rem;
+  max-width: 50rem;
+}
+
+.sectionNumber {
+  color: var(--orange);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionNumber::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  background: var(--dark-text);
+  height: 2px;
+  margin-left: 1rem;
+}

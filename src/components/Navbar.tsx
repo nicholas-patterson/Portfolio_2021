@@ -1,18 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import NavbarCSS from "../styles/navbar.module.css";
+import { Link, animateScroll as scroll  } from "react-scroll";
+
 
 
 const Navbar = () => {
+
+    const [show, setShow] = useState(false);
+
+    const scrollFunction = () => {
+       if(window.scrollY > 180){
+           setShow(false);
+       }else {
+           setShow(true);
+       }
+      }
+
+
+    useEffect(() => {
+       window.addEventListener("scroll", scrollFunction); 
+    }, [])
+
     return (
-        <div className={NavbarCSS.container}>
-            <h1 className={NavbarCSS.title}>Logo Here</h1>
-            <ul className={NavbarCSS.list}>
-                <li>About</li>
-                <li>Work</li>
-                <li>Experienvce</li>
-                <li>Resume</li>
-            </ul>
-        </div>
+        <header id="header" className={NavbarCSS.container} style={show ? {top: "0px"} : {top: "-80px"}}>
+            <h1 className={NavbarCSS.title}>Nicholas Codes</h1>
+            <nav>
+                <ul className={NavbarCSS.list}>
+                    <li>
+                        <a onClick={() =>  scroll.scrollToTop()}>Home</a>
+                    </li>
+                    <li>
+                        <Link to="about" smooth={true}>About</Link>
+                    </li>
+                    <li>
+                        <Link to="experience">Experience</Link>
+                    </li>
+                    <li>
+                        <Link to="work">Work</Link>
+                    </li>
+                    <li>
+                        <Link to="contact">Contact</Link>
+                    </li>
+                    <li>Resume</li>
+                </ul>
+            </nav>
+        </header>
     )
 }
 
