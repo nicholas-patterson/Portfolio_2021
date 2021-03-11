@@ -1,0 +1,29 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  right: 81px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.container a {
+  writing-mode: vertical-rl;
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: #d65a31;
+  transition: margin-bottom 0.3s;
+}
+
+.container a:hover {
+  margin-bottom: 3rem;
+}
+
+.container::after {
+  content: "";
+  width: 2px;
+  height: 8rem;
+  background: #eeeeee;
+}
