@@ -19,6 +19,7 @@ export default function Hero() {
             <div className={HeroCSS.copy}>
                 <p>I'm a software developer based in Pennsylvania, specializing in frontend development. </p>
             </div>
+                <button className={HeroCSS.button} type="button">Resume</button>
         </section>
     )
 }

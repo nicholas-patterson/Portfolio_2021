@@ -6,7 +6,7 @@ import { Link, animateScroll as scroll  } from "react-scroll";
 
 const Navbar = () => {
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     const scrollFunction = () => {
        if(window.scrollY > 180){
@@ -18,7 +18,11 @@ const Navbar = () => {
 
 
     useEffect(() => {
-       window.addEventListener("scroll", scrollFunction); 
+       window.addEventListener("scroll", scrollFunction);
+
+       return () => {
+           window.removeEventListener("scroll", scrollFunction);
+       }
     }, [])
 
     return (

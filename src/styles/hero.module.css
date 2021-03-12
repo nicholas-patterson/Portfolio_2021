@@ -47,3 +47,38 @@
   height: 2px;
   margin-left: 1rem;
 }
+
+.button {
+  position: relative;
+  padding: 1.5rem 3rem;
+  border: 2px solid var(--orange);
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--light-text);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.button::after {
+  content: "\2192";
+  width: 2px;
+  background: var(--light-text);
+  display: block;
+  position: absolute;
+  font-size: 3rem;
+  height: 0px;
+  right: 12px;
+  top: 5px;
+  transition: right 0.3s;
+  color: var(--light-text);
+}
+
+.button:hover {
+  background: #d65a3161;
+  box-shadow: inset 0px 0px 4px #000000c2;
+}
+
+.button:hover::after {
+  right: 6px;
+}
