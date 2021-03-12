@@ -6,6 +6,7 @@
   flex-direction: column;
   font-size: 1.5rem;
   align-items: center;
+  animation: slideUp ease-in 600ms;
 }
 
 .container a {
@@ -26,4 +27,14 @@
   width: 2px;
   height: 8rem;
   background: #eeeeee;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -330px;
+  }
+
+  100% {
+    bottom: 0;
+  }
 }
