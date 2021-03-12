@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import NavbarCSS from "../styles/navbar.module.css";
 import { Link, animateScroll as scroll  } from "react-scroll";
+import DarkMode from "./DarkMode";
 
 
 
@@ -45,7 +46,10 @@ const Navbar = () => {
                     <li>
                         <Link to="contact">Contact</Link>
                     </li>
-                    <li>Resume</li>
+                    <li className={NavbarCSS.resume}>Resume</li>
+                    <li>
+                        <DarkMode/>
+                    </li>
                 </ul>
             </nav>
         </header>
