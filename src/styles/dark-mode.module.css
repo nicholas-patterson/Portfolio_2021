@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  border: 2px solid var(--orange);
+  width: 7rem;
+  height: 3rem;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: inset 0px 0px 3px -1px black;
+}
+
+.container::before {
+  content: "";
+  width: 50%;
+  display: block;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #888;
+  border-radius: 50px;
+}
+
+.sun {
+  color: yellow;
+  z-index: -2;
+}
+
+.moon {
+  color: lightblue;
+  z-index: -2;
+}

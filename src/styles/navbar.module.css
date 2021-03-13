@@ -45,9 +45,8 @@
   color: #d65a31;
 }
 
-.list li:last-of-type {
+.list .resume {
   border: 2px solid #fff;
   border-radius: 3px;
   padding: 10px;
-  margin-right: 0px;
 }
