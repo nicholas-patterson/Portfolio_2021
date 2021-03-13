@@ -13,6 +13,7 @@
   box-sizing: border-box;
   top: 0;
   transition: top 0.3s;
+  animation: slideDown 600ms ease-in;
 }
 
 .title {
@@ -49,4 +50,14 @@
   border: 2px solid #fff;
   border-radius: 3px;
   padding: 10px;
+}
+
+@keyframes slideDown {
+  0% {
+    top: -84px;
+  }
+
+  100% {
+    top: 0;
+  }
 }
