@@ -1,3 +1,4 @@
+import { useState } from "react";
 import EmailPillar from "../components/EmailPillar";
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
@@ -7,11 +8,14 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 
 
+
 const HomePage = () => {
+    const [toggleDark, setToggleDark] = useState(true);
+
     return (
         <>
-        <Navbar/>
-        <Layout>
+        <Navbar setToggleDark={setToggleDark} toggleDark={toggleDark}/>
+        <Layout toggleDark={toggleDark}>
             <MainContent>
                 <Hero/>
                 <About/> 

@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, SetStateAction } from 'react'
 import NavbarCSS from "../styles/navbar.module.css";
 import { Link, animateScroll as scroll  } from "react-scroll";
 import DarkMode from "./DarkMode";
 
+interface Props {
+    toggleDark: boolean;
+    setToggleDark: React.Dispatch<SetStateAction<boolean>>;
+}
 
-
-const Navbar = () => {
+const Navbar = ({ toggleDark, setToggleDark}: Props) => {
 
     const [show, setShow] = useState(true);
 
@@ -48,7 +51,7 @@ const Navbar = () => {
                     </li>
                     <li className={NavbarCSS.resume}>Resume</li>
                     <li>
-                        <DarkMode/>
+                        <DarkMode toggleDark={toggleDark} setToggleDark={setToggleDark}/>
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,44 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: calc(100vh - 18rem);
+  position: relative;
+  &--sectionNumber {
+    color: var(--orange);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: "";
+      display: block;
+      width: 8rem;
+      background: var(--dark-text);
+      height: 2px;
+      margin-left: 1rem;
+    }
+  }
+
+  &--info {
+    &-image {
+      width: 600px;
+      height: 600px;
+      background: gray;
+      color: white;
+      text-align: center;
+      font-size: 3rem;
+    }
+    &-copy {
+      top: 200px;
+      right: 0;
+      font-size: 2rem;
+      max-width: 50%;
+      line-height: 3.5rem;
+      position: absolute;
+      left: 400px;
+      color: white;
+    }
+  }
+}

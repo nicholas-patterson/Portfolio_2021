@@ -1,0 +1,15 @@
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  &.dark-bg {
+    background: var(--dark-bg);
+  }
+
+  &.light-bg {
+    background: var(--light-text);
+  }
+}

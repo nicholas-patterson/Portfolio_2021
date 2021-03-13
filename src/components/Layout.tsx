@@ -1,13 +1,14 @@
 import React from 'react'
-import LayoutCSS from "../styles/layout.module.css";
+import "../styles/layout.scss";
 
 interface Props {
     children: React.ReactNode;
+    toggleDark: boolean;
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children, toggleDark }: Props) {
     return (
-        <div className={LayoutCSS.container}>
+        <div className={`main-container ${toggleDark ? "dark-bg" : "light-bg" }`}>
             {children}
         </div>
     )
