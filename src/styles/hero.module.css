@@ -24,7 +24,7 @@
   color: #eeeeee85;
 }
 
-.container .copy {
+.container p {
   color: #eeeeee85;
   font-size: 2rem;
   max-width: 50rem;
@@ -37,6 +37,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  animation: slideIn 400ms ease-in;
 }
 
 .sectionNumber::after {
@@ -81,4 +83,34 @@
 
 .button:hover::after {
   right: 6px;
+}
+
+.sectionInfo {
+  animation-fill-mode: forwards;
+  animation: fadeIn 1.5s cubic-bezier(0.4, 0, 1, 1) !important;
+  animation-delay: 300ms;
+}
+
+@keyframes slideIn {
+  0% {
+    left: -450px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
