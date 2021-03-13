@@ -3,6 +3,7 @@
   bottom: 0;
   font-size: 1.5rem;
   color: #d65a31;
+  animation: slideUp ease-in 600ms;
 }
 
 .list {
@@ -32,4 +33,14 @@
 .list li:hover {
   transform: translateY(-3px);
   cursor: pointer;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -320px;
+  }
+
+  100% {
+    bottom: 0;
+  }
 }
